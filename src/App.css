@@ -1,0 +1,48 @@
+.container{
+  max-width: 900px;
+  margin: 32px auto;
+}
+
+.container-filter{
+  display: flex;
+  justify-content: space-between;
+
+  span{
+    background-color: #306BAC;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+}
+
+.table{
+  margin: 16px 0;
+  width: 100%;
+  th{
+    border-bottom: solid 1px;
+  }
+  td{
+    border-bottom: solid 1px;
+    padding: 8px;
+    text-align: center;
+  }
+
+  span{
+    cursor: pointer;
+    padding: 8px 16px;
+    color: #fff;
+    background-color: #141B41;
+    border-radius: 8px;
+  }
+}
+
+.contenedor-inputs{
+  display: flex;
+  justify-content: space-between;
+
+  div{
+    display: flex;
+    gap: 16px;
+  }
+}

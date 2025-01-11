@@ -1,0 +1,23 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input, input:focus, input:active{
+  border-radius: 8px;   
+  border: solid 1px;
+  outline: none;
+  padding: 8px;
+}
+
+input[type=button]{
+  padding: 8px 16px;
+  background-color: #306BAC;
+  color: #fff;
+  cursor: pointer;
+}
