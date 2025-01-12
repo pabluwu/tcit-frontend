@@ -14,7 +14,7 @@ NodeJS 18+
 
 ```bash
 #Entrar a la carpeta.
-$ cd react-tcit/
+$ cd tcit-frontend/
 
 #Instalar dependencias.
 $ npm install
