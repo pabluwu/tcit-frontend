@@ -1,12 +1,16 @@
+import { useMemo } from "react";
 import { useSelector, useDispatch } from "react-redux"
 import { deletePost } from "../../store/post/slice";
 
 const Table = () => {
 
-    const posts = useSelector(state => {
-        const { posts, filter } = state.post;
-        return posts.filter(post => post.name?.toLowerCase().includes(filter.toLowerCase()));
-    });
+    const { posts, filter } = useSelector(state => state.post);
+
+    //Use memo para mejorar perfomance y re render del filtro desde redux
+    const postsFiltrados = useMemo(() => {
+            return posts.filter(post => post.name?.toLowerCase().includes(filter.toLowerCase()));
+    }, [posts, filter])
+
 
     const dispatch = useDispatch();
 
@@ -25,7 +29,7 @@ const Table = () => {
                 </tr>
             </thead>
             <tbody>
-                {posts.map((item) => (
+                {postsFiltrados.map((item) => (
                     <tr key={item.id}>
                         <td>{item.name}</td>
                         <td>{item.description}</td>
